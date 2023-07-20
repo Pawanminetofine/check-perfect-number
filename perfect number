@@ -1,0 +1,25 @@
+//first know about perfect number 
+//the number is perfect number if sum of all the factor other than the number itself is equal to the given number
+#include <stdio.h>
+int n,sum=0;
+int main() {
+    printf("enter the value of the n");
+    scanf("%d",&n);
+    for(int i=1;i<n;i++){
+        int a=n%i;
+        if(a==0){
+            printf("%d is the factor of the given number\n",i);
+            sum=sum+i;
+        }
+        else{
+            printf("%d is not the prime factor of the given number\n",i);
+        }
+    }
+    if(sum==n){
+        printf("%d is the perfect number",n);
+    }
+    else{
+        printf("%d is not the perfect number",n);
+    }
+    return 0;
+}
